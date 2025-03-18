@@ -169,7 +169,7 @@ export const TIMEOUTS = {
 export const SORTING_OPTIONS = {
   asc: 'asc',
   desc: 'desc'
-};
+} as const;
 
 export const DEVICE_ONLINE_CUTOFF = { interval: 1, intervalName: timeUnits.days };
 
@@ -269,3 +269,8 @@ export const emptyRole: UiRoleDefinition = Object.freeze({
   permissions: [],
   uiPermissions: Object.freeze({ ...emptyUiPermissions })
 });
+
+export interface SortOptions {
+  direction: keyof typeof SORTING_OPTIONS;
+  key?: string;
+}
