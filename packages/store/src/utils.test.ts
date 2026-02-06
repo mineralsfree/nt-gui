@@ -13,19 +13,16 @@
 //    limitations under the License.
 // @ts-nocheck
 import { defaultState } from '@/testUtils';
-import { mockApiResponses } from '@northern.tech/testing/mockData';
 import { describe, expect, it } from 'vitest';
 
 import { DARK_MODE, LIGHT_MODE } from './constants';
-import { mockState } from './organizationSlice/mocks';
 import {
   generateDeploymentGroupDetails,
   groupDeploymentDevicesStats,
   groupDeploymentStats,
   isDarkMode,
   mapDeviceAttributes,
-  parseSubscriptionPreview,
-  transformProductResponse
+  parseSubscriptionPreview
 } from './utils';
 
 describe('mapDeviceAttributes function', () => {
